@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hkonstan <hkonstan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hariskon <hariskon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 20:06:04 by hkonstan          #+#    #+#             */
-/*   Updated: 2026/08/07 19:27:31 by hkonstan         ###   ########.fr       */
+/*   Updated: 2026/08/08 22:07:08 by hariskon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@ class	phonebook {
     	~phonebook();						          // Destructor
 		   
 		//Utility functions:
+		void show_contact(std::string index);
 		void search(void);
 		void addContact(int index, contacts new_contact);
+		int			length();
 	private:
 		contacts dataset[8];
 };
