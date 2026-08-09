@@ -6,11 +6,14 @@
 /*   By: hariskon <hariskon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 20:04:48 by hkonstan          #+#    #+#             */
-/*   Updated: 2026/08/08 21:30:48 by hariskon         ###   ########.fr       */
+/*   Updated: 2026/08/09 16:36:40 by hariskon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contacts.hpp"
+#ifndef CONTACTS
+#define CONTACTS
+
+# include "contacts.hpp"
 
 contacts::contacts(){
 }
@@ -105,3 +108,5 @@ void contacts::addNumber(void){
 	}
 	number = input;
 }
+
+#endif

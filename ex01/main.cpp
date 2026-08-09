@@ -6,11 +6,11 @@
 /*   By: hariskon <hariskon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 20:02:00 by hkonstan          #+#    #+#             */
-/*   Updated: 2026/08/08 22:13:17 by hariskon         ###   ########.fr       */
+/*   Updated: 2026/08/09 16:47:08 by hariskon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "main.hpp"
+#include "phonebook.hpp"
 
 int main(){
 	phonebook my_phonebook;
@@ -28,7 +28,7 @@ int main(){
 			temp.addSecret();
 			my_phonebook.addContact(i, temp);
 			i++;
-			if (i == 1)
+			if (i == 8)
 				i = 0;
 		}
 		else if  (command == "SEARCH"){

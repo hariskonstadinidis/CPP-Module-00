@@ -6,18 +6,17 @@
 /*   By: hariskon <hariskon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 20:06:04 by hkonstan          #+#    #+#             */
-/*   Updated: 2026/08/08 22:07:08 by hariskon         ###   ########.fr       */
+/*   Updated: 2026/08/09 16:37:14 by hariskon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef PHONEBOOK
+#define PHONEBOOK
 
 #include "contacts.hpp"
 
 class	phonebook {
 	public:
-		//Orthocanonical prequiites:
-		phonebook();                     		      // Constructor
-    	~phonebook();						          // Destructor
-		   
 		//Utility functions:
 		void show_contact(std::string index);
 		void search(void);
@@ -26,3 +25,5 @@ class	phonebook {
 	private:
 		contacts dataset[8];
 };
+
+#endif

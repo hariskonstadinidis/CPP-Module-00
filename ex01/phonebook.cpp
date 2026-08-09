@@ -6,18 +6,11 @@
 /*   By: hariskon <hariskon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 20:06:02 by hkonstan          #+#    #+#             */
-/*   Updated: 2026/08/08 22:14:13 by hariskon         ###   ########.fr       */
+/*   Updated: 2026/08/09 16:25:12 by hariskon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.hpp"
-
-
-phonebook::phonebook(){
-}
-
-phonebook::~phonebook(){
-}
 
 void phonebook::addContact(int index, contacts new_contact) {
 	dataset[index] = new_contact;
