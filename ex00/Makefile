@@ -6,7 +6,7 @@
 #    By: hkonstan <hkonstan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/08/06 19:08:32 by hkonstan          #+#    #+#              #
-#    Updated: 2026/08/06 19:29:00 by hkonstan         ###   ########.fr        #
+#    Updated: 2026/08/10 17:00:03 by hkonstan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = megaphone
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = megaphone.cpp
+SRC = src/megaphone.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

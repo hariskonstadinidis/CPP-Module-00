@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hariskon <hariskon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hkonstan <hkonstan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 20:06:02 by hkonstan          #+#    #+#             */
-/*   Updated: 2026/08/09 16:25:12 by hariskon         ###   ########.fr       */
+/*   Updated: 2026/08/10 17:03:39 by hkonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#include "../include/phonebook.hpp"
 
 void phonebook::addContact(int index, contacts new_contact) {
 	dataset[index] = new_contact;
@@ -71,7 +71,7 @@ void phonebook::search(void){
 	}
 }
 
-int			phonebook::length(){
+int	phonebook::length(){
 	int	i;
 	for (i = 0; dataset[i].getFirstName().length(); i++){
 	}

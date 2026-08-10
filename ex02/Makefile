@@ -3,7 +3,7 @@ NAME = Account
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = tests.cpp Account.cpp
+SRC = src/tests.cpp src/Account.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

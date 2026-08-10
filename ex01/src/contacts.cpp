@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   contacts.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hariskon <hariskon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hkonstan <hkonstan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 20:04:48 by hkonstan          #+#    #+#             */
-/*   Updated: 2026/08/09 16:36:40 by hariskon         ###   ########.fr       */
+/*   Updated: 2026/08/10 16:59:41 by hkonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACTS
 #define CONTACTS
 
-# include "contacts.hpp"
+# include "../include/contacts.hpp"
 
 contacts::contacts(){
 }

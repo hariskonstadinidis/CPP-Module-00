@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Account.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hariskon <hariskon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hkonstan <hkonstan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/09 16:28:53 by hariskon          #+#    #+#             */
-/*   Updated: 2026/08/09 22:47:52 by hariskon         ###   ########.fr       */
+/*   Updated: 2026/08/10 16:59:16 by hkonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <iomanip>
 #include <iostream>
 #include <cctype>
-#include "Account.hpp"
+#include "../include/Account.hpp"
 
 	int	Account::_nbAccounts = 0;
 	int	Account::_totalAmount = 0;
