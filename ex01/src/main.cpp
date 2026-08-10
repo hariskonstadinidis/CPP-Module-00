@@ -6,7 +6,7 @@
 /*   By: hkonstan <hkonstan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 20:02:00 by hkonstan          #+#    #+#             */
-/*   Updated: 2026/08/10 16:59:44 by hkonstan         ###   ########.fr       */
+/*   Updated: 2026/08/10 17:52:52 by hkonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,14 @@ int main(){
 		else if  (command == "SEARCH"){
 			my_phonebook.search();
 			std::cout<<"Please choose one of the contacts from the phonebook."<<std::endl;
-			std::getline(std::cin, command);
+			if (!std::getline(std::cin, command))
+				break;
 			while(!(command.length() == 1 &&  (command[0] >= '0' && command[0] < my_phonebook.length() + 48)))
 			{
 				my_phonebook.search();
 				std::cout<<"Please choose a valid index number from the existing contacts."<<std::endl;
-				std::getline(std::cin, command);
+				if (!std::getline(std::cin, command))
+					break;
 			}
 			my_phonebook.show_contact(command);
 		}

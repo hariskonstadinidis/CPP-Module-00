@@ -6,7 +6,7 @@
 #    By: hkonstan <hkonstan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/08/06 19:08:32 by hkonstan          #+#    #+#              #
-#    Updated: 2026/08/10 17:00:03 by hkonstan         ###   ########.fr        #
+#    Updated: 2026/08/10 17:40:26 by hkonstan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
-%.o: %.cpp
+%.o: %.cpp Makefile
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
