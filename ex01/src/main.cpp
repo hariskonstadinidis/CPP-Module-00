@@ -6,7 +6,7 @@
 /*   By: hkonstan <hkonstan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 20:02:00 by hkonstan          #+#    #+#             */
-/*   Updated: 2026/08/10 17:52:52 by hkonstan         ###   ########.fr       */
+/*   Updated: 2026/08/11 19:40:17 by hkonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int main(){
 			temp.addNickName();
 			temp.addNumber();
 			temp.addSecret();
+			std::cout <<i <<std::endl;
 			my_phonebook.addContact(i, temp);
 			i++;
 			if (i == 8)

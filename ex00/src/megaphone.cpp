@@ -6,7 +6,7 @@
 /*   By: hkonstan <hkonstan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 18:56:11 by hkonstan          #+#    #+#             */
-/*   Updated: 2026/08/06 19:53:44 by hkonstan         ###   ########.fr       */
+/*   Updated: 2026/08/11 19:23:43 by hkonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,15 @@
 
 int	main(int argc, char **argv)
 {
+	std::string output;
 	if (argc == 1)
 		std::cout<<"* LOUD AND UNBEARABLE FEEDBACK NOISE *"<<std::endl;
 	else
 	{
 		for (int i = 1; argv[i] != NULL; i++)
-		{
-			for(int j = 0; argv[i][j] != '\0'; j++)
-			{
-				std::cout<<static_cast<char>(std::toupper(argv[i][j]));
-			}
-			if (argv[i + 1])
-				std::cout <<" ";
-			else
-				std::cout <<std::endl;
-		}
+			for (int j = 0; argv[i][j] != '\0'; j++)
+				output += std::toupper(argv[i][j]);
+		std::cout << output << std::endl;
 	}
 	return 0;
 }
