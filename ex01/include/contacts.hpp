@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   contacts.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hariskon <hariskon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hkonstan <hkonstan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 20:04:58 by hkonstan          #+#    #+#             */
-/*   Updated: 2026/08/08 21:30:33 by hariskon         ###   ########.fr       */
+/*   Updated: 2026/08/11 20:41:54 by hkonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ class	contacts {
     	~contacts(); 							    // Destructor   
 		
 		//Variable manipulation functions:
-		void addName(void);
-		void addLastName(void);
-		void addNumber(void);
-		void addNickName(void);
-		void addSecret(void);
+		bool addName(void);
+		bool addLastName(void);
+		bool addNumber(void);
+		bool addNickName(void);
+		bool addSecret(void);
 		//Utility functions:
 		std::string getFirstName() const;
 		std::string getLastName() const;

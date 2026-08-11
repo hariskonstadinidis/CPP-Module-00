@@ -6,7 +6,7 @@
 /*   By: hkonstan <hkonstan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 20:04:48 by hkonstan          #+#    #+#             */
-/*   Updated: 2026/08/11 19:46:01 by hkonstan         ###   ########.fr       */
+/*   Updated: 2026/08/11 21:01:04 by hkonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,59 +54,75 @@ std::string contacts::getDarkestSecret() const{
 	return (darkest_secret);
 }
 
-void contacts::addName(void){
-	std::string name;
+bool contacts::addName(void){
+	std::string input;
 	std::cout<<"Please write the first name:"<<std::endl;
-	std::getline(std::cin, name);
-	while (name.length() <= 0){
+	if (!std::getline(std::cin, input))
+		return false;
+	while (input.length() <= 0){
 		std::cout<<"Please write a non empty first name:"<<std::endl;
-		std::getline(std::cin, name);
+		if (!std::getline(std::cin, input))
+			return false;
 	}
-	first_name = name;
+	first_name = input;
+	return true;
 }
 
-void contacts::addLastName(void){
+bool contacts::addLastName(void){
 	std::string input;
 	std::cout<<"Please write the last name:"<<std::endl;
-	std::getline(std::cin, input);
+	if (!std::getline(std::cin, input))
+		return false;
 	while (input.length() <= 0){
 		std::cout<<"Please write a non empty last name:"<<std::endl;
-		std::getline(std::cin, input);
+		if (!std::getline(std::cin, input))
+			return false;
 	}
 	last_name = input;
+	return true;
 }
 
-void contacts::addNickName(void){
+bool contacts::addNickName(void){
 	std::string input;
 	std::cout<<"Please write the nick name:"<<std::endl;
-	std::getline(std::cin, input);
+	if (!std::getline(std::cin, input))
+		return false;
 	while (input.length() <= 0){
 		std::cout<<"Please write a non empty nick name:"<<std::endl;
-		std::getline(std::cin, input);
+		if (!std::getline(std::cin, input))
+			return false;
 	}
 	nick_name = input;
+	return true;
 }
 
-void contacts::addSecret(void){
+bool contacts::addSecret(void){
 	std::string input;
 	std::cout<<"Please write the darkest secret:"<<std::endl;
-	std::getline(std::cin, input);
+	if (!std::getline(std::cin, input))
+		return false;
 	while (input.length() <= 0){
 		std::cout<<"Please write a non empty darkest secret:"<<std::endl;
-		std::getline(std::cin, input);
+		if (!std::getline(std::cin, input))
+			return false;;
 	}
 	darkest_secret = input;
+	return true;
 }
 
-void contacts::addNumber(void){
+bool contacts::addNumber(void){
 	std::string input;
 	std::cout<<"Please write the number:"<<std::endl;
-	std::getline(std::cin, input);
+	if (!std::getline(std::cin, input))
+		return false;
 	while (input.length() <= 0){
 		std::cout<<"Please write a non empty number:"<<std::endl;
-		std::getline(std::cin, input);
+		if (!std::getline(std::cin, input))
+			return false;
 	}
 	number = input;
+	return true;
+	
 }
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: hkonstan <hkonstan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 20:06:04 by hkonstan          #+#    #+#             */
-/*   Updated: 2026/08/11 19:40:38 by hkonstan         ###   ########.fr       */
+/*   Updated: 2026/08/11 20:50:46 by hkonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@ class	phonebook {
 	private:
 		contacts dataset[8];
 };
+
+int add_info(contacts *temp);
 
 #endif

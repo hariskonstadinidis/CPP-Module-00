@@ -6,11 +6,26 @@
 /*   By: hkonstan <hkonstan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 20:02:00 by hkonstan          #+#    #+#             */
-/*   Updated: 2026/08/11 19:40:17 by hkonstan         ###   ########.fr       */
+/*   Updated: 2026/08/11 20:59:18 by hkonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/phonebook.hpp"
+
+int add_info(contacts *temp)
+{
+	if (!temp->addName() || !temp->addLastName() || !temp->addNickName()\
+	 || !temp->addNumber() || !temp->addSecret())
+		return (0);
+	return (1);
+}
+
+int is_valid_index(std::string index, int total_contacts)
+{
+	if (!(index.length() == 1 &&  (index[0] >= '0' && index[0] < total_contacts + 48)))
+		return (0);
+	return (1);
+}
 
 int main(){
 	phonebook my_phonebook;
@@ -19,14 +34,13 @@ int main(){
 	int i = 0;
 	
 	std::cout<<"Please write one of the following instuctions: ADD, SEARCH, EXIT"<<std::endl;
-	while (std::getline(std::cin, command)){
+	while (1)
+	{
+		if (!std::getline(std::cin, command))
+			return 0;
 		if (command == "ADD"){
-			temp.addName();
-			temp.addLastName();
-			temp.addNickName();
-			temp.addNumber();
-			temp.addSecret();
-			std::cout <<i <<std::endl;
+			if (!add_info(&temp))
+				break;
 			my_phonebook.addContact(i, temp);
 			i++;
 			if (i == 8)
@@ -37,7 +51,7 @@ int main(){
 			std::cout<<"Please choose one of the contacts from the phonebook."<<std::endl;
 			if (!std::getline(std::cin, command))
 				break;
-			while(!(command.length() == 1 &&  (command[0] >= '0' && command[0] < my_phonebook.length() + 48)))
+			while(!is_valid_index(command, my_phonebook.length()))
 			{
 				my_phonebook.search();
 				std::cout<<"Please choose a valid index number from the existing contacts."<<std::endl;
@@ -52,4 +66,5 @@ int main(){
 		}
 		std::cout<<"Please write one of the following instuctions: ADD, SEARCH, EXIT"<<std::endl;
 	}
+	return (0);
 }
