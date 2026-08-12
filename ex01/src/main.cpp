@@ -6,7 +6,7 @@
 /*   By: hkonstan <hkonstan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 20:02:00 by hkonstan          #+#    #+#             */
-/*   Updated: 2026/08/12 13:41:27 by hkonstan         ###   ########.fr       */
+/*   Updated: 2026/08/12 17:53:30 by hkonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,10 @@ int main(){
 	contacts temp;
 	int i = 0;
 	
-	std::cout<<"Please write one of the following instuctions: ADD, SEARCH, EXIT"<<std::endl;
+	
 	while (1)
 	{
+		std::cout<<"Please write one of the following instuctions: ADD, SEARCH, EXIT"<<std::endl;
 		if (!std::getline(std::cin, command))
 			return 0;
 		if (command == "ADD"){
@@ -47,6 +48,11 @@ int main(){
 				i = 0;
 		}
 		else if  (command == "SEARCH"){
+			if (my_phonebook.length() == 0)
+			{
+				std::cout<<"There are no saved contacts."<<std::endl;
+				continue;
+			}
 			my_phonebook.search();
 			std::cout<<"Please choose one of the contacts from the phonebook."<<std::endl;
 			if (!std::getline(std::cin, command))
@@ -64,7 +70,6 @@ int main(){
 			std::cout<<"Phonebook was aborted, bye bye!"<<std::endl;
 			break;
 		}
-		std::cout<<"Please write one of the following instuctions: ADD, SEARCH, EXIT"<<std::endl;
 	}
 	return (0);
 }
