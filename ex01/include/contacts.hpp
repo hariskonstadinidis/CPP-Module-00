@@ -6,7 +6,7 @@
 /*   By: hkonstan <hkonstan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 20:04:58 by hkonstan          #+#    #+#             */
-/*   Updated: 2026/08/11 20:41:54 by hkonstan         ###   ########.fr       */
+/*   Updated: 2026/08/12 13:43:15 by hkonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,6 @@
 
 class	contacts {
 	public:
-		//Orthocanonical prequiites:
-		contacts();                     		    // Constructor
-    	contacts(const contacts& other);            // Copy constructor
-    	contacts& operator=(const contacts& other); // Copy assignment operator
-    	~contacts(); 							    // Destructor   
-		
 		//Variable manipulation functions:
 		bool addName(void);
 		bool addLastName(void);

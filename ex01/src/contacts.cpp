@@ -6,7 +6,7 @@
 /*   By: hkonstan <hkonstan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 20:04:48 by hkonstan          #+#    #+#             */
-/*   Updated: 2026/08/11 21:01:04 by hkonstan         ###   ########.fr       */
+/*   Updated: 2026/08/12 13:43:30 by hkonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,6 @@
 #define CONTACTS
 
 # include "../include/contacts.hpp"
-
-contacts::contacts(){
-}
-
-contacts::contacts(const contacts& other){
-	*this = other;
-} 
-         
-contacts &contacts::operator=(const contacts& other){
-	this->first_name = other.first_name;
-	this->last_name = other.last_name;
-	this->number = other.number;
-	this->darkest_secret =  other.darkest_secret;
-	this->nick_name =  other.nick_name;
-	return (*this);
-}
-
-contacts::~contacts(){
-}
 
 std::string contacts::getFirstName() const{
 	return (first_name);

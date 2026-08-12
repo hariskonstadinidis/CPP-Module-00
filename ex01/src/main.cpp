@@ -6,13 +6,13 @@
 /*   By: hkonstan <hkonstan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 20:02:00 by hkonstan          #+#    #+#             */
-/*   Updated: 2026/08/11 20:59:18 by hkonstan         ###   ########.fr       */
+/*   Updated: 2026/08/12 13:41:27 by hkonstan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/phonebook.hpp"
 
-int add_info(contacts *temp)
+int collect_info(contacts *temp)
 {
 	if (!temp->addName() || !temp->addLastName() || !temp->addNickName()\
 	 || !temp->addNumber() || !temp->addSecret())
@@ -39,7 +39,7 @@ int main(){
 		if (!std::getline(std::cin, command))
 			return 0;
 		if (command == "ADD"){
-			if (!add_info(&temp))
+			if (!collect_info(&temp))
 				break;
 			my_phonebook.addContact(i, temp);
 			i++;
@@ -56,7 +56,7 @@ int main(){
 				my_phonebook.search();
 				std::cout<<"Please choose a valid index number from the existing contacts."<<std::endl;
 				if (!std::getline(std::cin, command))
-					break;
+					return(0);
 			}
 			my_phonebook.show_contact(command);
 		}
